@@ -44,8 +44,8 @@ Two data types used: integer numbers and strings, also supported number arrays.
 
 ### Operators:
 
-* Call functions: * &lt;function&gt; *(* &lt;arg&gt;* *{*, * &lt;arg&gt; * *}* *)*
-* Call function with 1 argument: * &lt;function&gt; * * &lt;arg&gt; *
+* Call functions: *&lt;function&gt;*(*&lt;arg&gt;* *{*, *&lt;arg&gt;* *}*)
+* Call function with 1 argument: *&lt;function&gt;* *&lt;arg&gt;*
 * Arithmetic operators: - + * / (integer division) % (mod)
 * String operators: & (concat)
 * Comparation operators: = &lt;&gt;  &gt; &lt; &gt;= &lt;=
@@ -60,31 +60,31 @@ Modules can import names from another modules with EXPORT modifier.
 
 ### Structure of module:
 
-*{* **IMPORT** *[* *package* *{* .*subpackage* *}*.*]* ModuleName *[* Name *{*, Name *}* *]* *}*
+*{* **IMPORT** *[*package*{*.subpackage*}*.*]*ModuleName*[(*Name*{*,Name*}*)*]* *}*
 
-*{* *[* **EXPORT** *]* * &lt;constant-variable-array-function-or-subroutine-declaration&gt; * *}*
+*{* *[* **EXPORT** *]* *&lt;constant-variable-array-function-or-subroutine-declaration&gt;* *}*
 
 *[* **BEGIN**
 
-*{* * &lt;statement&gt; * *}*
+*{* *&lt;statement&gt;* *}*
 
 **END** *]*
 
 ### Declare constants:
 
-**CONST** ConstantName *[* $ *]* = * &lt;constant-value&gt; *
+**CONST** ConstantName*[*$*]* = *&lt;constant-value&gt;*
 
 ### Declare variables with initialization:
 
-**VAR** VarName *[* $ *]* = * &lt;variable-value&gt; *
+**VAR** VarName *[*$*]* = *&lt;variable-value&gt;*
 
 ### Declare variables without initialization:
 
-**VAR** VarName *[* $ *]* *{* , VarName *[* $ *]* *}*
+**VAR** VarName*[*$*]* *{*, VarName*[*$*]* *}*
 
 ### Declare static arrays:
 
-**DIM** ArrayName[ * &lt;size&gt; * ] *[* **DATA** * &lt;value&gt; * *{* , * &lt;value&gt; * *}* *]*
+**DIM** ArrayName[*&lt;size&gt;*] *[* **DATA** *&lt;value&gt;* *{*, *&lt;value&gt;* *}* *]*
 
 ### Declare dynamic arrays:
 
@@ -92,25 +92,25 @@ Modules can import names from another modules with EXPORT modifier.
 
 ### Declare simple functions:
 
-**DEF** FunctionName *[* $ *]* ( *[* argName *[* $ *]* *{* , argName *[* $ *]* *}* *]* ) = * &lt;expression&gt; *
+**DEF** FunctionName*[*$*]*(*[*argName*[*$*]* *{*, argName*[*$*]* *}* *]*) = *&lt;expression&gt;*
 
 ### Declare multiline functions:
 
-**FUNCTION** FunctionName *[* $ *]* ( *[* argName *[* $ *]* *{* , argName *[* $ *]* *}* *]* )
+**FUNCTION** FunctionName*[*$*]*(*[*argName*[*$*]* *{*, argName*[*$*]* *}* *]*)
 
-*{* **VAR** localVarName *[* $ *]* *{* , localVarName *[* $ *]* *}* *}*
+*{* **VAR** localVarName*[*$*]* *{*, localVarName*[*$*]* *}* *}*
 
-*{* * &lt;statement&gt; * *}*
+*{* *&lt;statement&gt;* *}*
 
 **END** **FUNCTION**
 
 ### Declare subroutines:
 
-**SUB** SubroutineName( *[* *argName* *]* )
+**SUB** SubroutineName(*[**argName*[*$*]* *{*, argName*[*$*]* *}* *]*)
 
-*{* **VAR** localVarName *[* $ *]* *{* , localVarName *[* $ *]* *}* *}*
+*{* **VAR** localVarName *[*$*]* *{*, localVarName*[*$*]* *}* *}*
 
-*{* * &lt;statement&gt; * *}*
+*{* *&lt;statement&gt;* *}*
 
 **END** **SUB**
 
@@ -119,117 +119,117 @@ Functions
 
 **ABS** ( *number* ) - absolute value of number
 
-**BAND** ( *n* , *m* ) - binary AND operator (get share bites)
+**BAND** ( *n*, *m* ) - binary AND operator (get share bites)
 
-**BIT** ( *number* , * &lt;bit&gt; * ) - check bit (0-15) in number
+**BIT** ( *number*, *&lt;bit&gt;* ) - check bit (0-15) in number
 
 **BNOT** ( *n* ) - binary NOT operator (inverse bites)
 
-**BOR** ( *n* , *m* ) - binary OR operator (unite bites)
+**BOR** ( *n*, *m* ) - binary OR operator (unite bites)
 
-**BOUND** ( * &lt;array&gt; * ) - size of array
+**BOUND** ( *&lt;array&gt;* ) - size of array
 
-**BXOR** ( *n* , *m* ) - binary XOR operator (get difference of bites)
+**BXOR** ( *n*, *m* ) - binary XOR operator (get difference of bites)
 
 **CHR$** ( *charCode* ) - character by ASCII code
 
 **CODE** (*c$* ) - ASCII code of character
 
-**INSTR** ( *[* *startIndex* *]* , *string$* , *subString$* ) - find substring (0 if not found or index)
+**INSTR** ( *[* *startIndex* *]*, *string$*, *subString$* ) - find substring (0 if not found or index)
 
-**LEFT$** ( *string$* , *count* ) - left substring
+**LEFT$** ( *string$*, *count* ) - left substring
 
 **LEN** ( *string$* ) - length of string
 
-**LSH** ( *number* , * &lt;bit-count&gt; * ) - left shift for number
+**LSH** ( *number*, *&lt;bit-count&gt;* ) - left shift for number
 
-**MID$** (*string$* , *index* , *count* ) - middle substring
+**MID$** (*string$*, *index* , *count* ) - middle substring
 
 **RANDOM** (*limit* ) - get integer random number in range from 0 to (limit - 1)
 
-**RIGHT$** (*string$* , *count* ) - right substring
+**RIGHT$** (*string$*, *count* ) - right substring
 
-**RSH** ( *number* , * &lt;bit-count&gt; * ) - signed right shift for number
+**RSH** ( *number*, *&lt;bit-count&gt;* ) - signed right shift for number
 
 **STR$** ( *number* ) - convert number to string
 
-**USH** ( *number* , * &lt;bit-count&gt; * ) - unsigned right shift for number
+**USH** ( *number*, *&lt;bit-count&gt;* ) - unsigned right shift for number
 
 **VAL** ( *string$* ) - convert string to number (0 if invalid string)
 
 Simple statements
 -----------------
 
-**BRESET** * &lt;lvalue&gt; * , * &lt;bit&gt; * - reset bit in number variable
+**BRESET** *&lt;lvalue&gt;*, *&lt;bit&gt;* - reset bit in number variable
 
-**BSET** * &lt;lvalue&gt; * , * &lt;bit&gt; * - set bit in number variable
+**BSET** *&lt;lvalue&gt;*, *&lt;bit&gt;* - set bit in number variable
 
-*[* **CALL** *]* * &lt;subroutine&gt; * *{* , * &lt;arg&gt; * *}* - call subroutine
+*[* **CALL** *]* *&lt;subroutine&gt;* *{*, *&lt;arg&gt;* *}* - call subroutine
 
 **CLS** - clear screen
 
-**COPY** * &lt;src-array&gt; * , *srcIndex* , * &lt;dest-array&gt; * , *destIndex* , *count* - copy arrays
+**COPY** *&lt;src-array&gt;*, *srcIndex* , *&lt;dest-array&gt;*, *destIndex* , *count* - copy arrays
 
-**DEC** * &lt;lvalue&gt; * *{* , *step* *}* - decrease number variable
+**DEC** *&lt;lvalue&gt;* *{* , *step* *}* - decrease number variable
 
-**FILL** * &lt;array&gt; * , *startIndex* , *count* , *value* - fill array
+**FILL** *&lt;array&gt;*, *startIndex* , *count* , *value* - fill array
 
-**FREE** * &lt;array&gt; * - remove dynamic array from memory
+**FREE** *&lt;array&gt;* - remove dynamic array from memory
 
-**INC** * &lt;lvalue&gt; * *{* , *step* *}* - increase number variable
+**INC** *&lt;lvalue&gt;* *{*, *step* *}* - increase number variable
 
-**INPUT** * &lt;lvalue&gt; * - input value of number or string variable from console
+**INPUT** *&lt;lvalue&gt;* - input value of number or string variable from console
 
-*[* **LET** *]* * &lt;lvalue&gt; * = * &lt;new-value&gt; * - set new value to variable
+*[* **LET** *]* *&lt;lvalue&gt;* = *&lt;new-value&gt;* - set new value to variable
 
 **PAUSE** *time* - pause program on time (in ticks, 10 per second)
 
 **QUIT** - terminate program
 
-**READ** * &lt;lvalue&gt; * *{* , * &lt;lvalue&gt; * *}* - get new value from data source and move pointer forward
+**READ** *&lt;lvalue&gt;* *{*, *&lt;lvalue&gt;* *}* - get new value from data source and move pointer forward
 
-**REDIM** * &lt;array&gt; * *[* * &lt;new-size&gt; * *]* - set new size to dynamic array
+**REDIM** *&lt;array&gt;*[*&lt;new-size&gt;*] - set new size to dynamic array
 
-**RESTORE** * &lt;data-source&gt; * - set data source for READ statement (string or array)
+**RESTORE** *&lt;data-source&gt;* - set data source for READ statement (string or array)
 
-**RETURN** *[* * &lt;result&gt; * *]* - return from function or subroutine
+**RETURN** *[* *&lt;result&gt;* *]* - return from function or subroutine
 
-**SWAP** * &lt;first-lvalue&gt; * , * &lt;second-lvalue&gt; * - swap values of two varaibles
+**SWAP** *&lt;first-lvalue&gt;*, *&lt;second-lvalue&gt;* - swap values of two varaibles
 
 Conditional statements
 ----------------------
 
 ### Simple IF statement:
 
-**IF** * &lt;condition&gt; * **THEN** * &lt;statement&gt; *
+**IF** *&lt;condition&gt;* **THEN** *&lt;statement&gt;*
 
 ### Multiwise IF statement:
 
-**IF** * &lt;condition&gt; * **THEN**
+**IF** *&lt;condition&gt;* **THEN**
 
-&nbsp;&nbsp;&nbsp;&nbsp; *{* * &lt;statement&gt; * *}*
+&nbsp;&nbsp;&nbsp;&nbsp; *{* *&lt;statement&gt;* *}*
 
-*{* **ELSE** **IF** * &lt;condition&gt; * **THEN**
+*{* **ELSE** **IF** *&lt;condition&gt;* **THEN**
 
-&nbsp;&nbsp;&nbsp;&nbsp; *{* * &lt;statement&gt; * *}* *}*
+&nbsp;&nbsp;&nbsp;&nbsp; *{* *&lt;statement&gt;* *}* *}*
 
 *[* **ELSE**
 
-&nbsp;&nbsp;&nbsp;&nbsp; *{* * &lt;statement&gt; * *}* *]*
+&nbsp;&nbsp;&nbsp;&nbsp; *{* *&lt;statement&gt;* *}* *]*
 
 **END** **IF**
 
 ### Multiwise SELECT statement:
 
-**SELECT** **CASE** * &lt;case-value&gt; *
+**SELECT** **CASE** *&lt;case-value&gt;*
 
-*{* **CASE** * &lt;variant&gt; * *{* , * &lt;variant&gt; * *}*
+*{* **CASE** *&lt;variant&gt;* *{*, *&lt;variant&gt;* *}*
 
-&nbsp;&nbsp;&nbsp;&nbsp; *{* * &lt;statement&gt; * *}* *}*
+&nbsp;&nbsp;&nbsp;&nbsp; *{* *&lt;statement&gt;* *}* *}*
 
 *[* **DEFAULT**
 
-&nbsp;&nbsp;&nbsp;&nbsp; *{* * &lt;statement&gt; * *}* *]*
+&nbsp;&nbsp;&nbsp;&nbsp; *{* *&lt;statement&gt;* *}* *]*
 
 **END** **SELECT**
 
@@ -238,17 +238,17 @@ Cycle statements
 
 ### Sequetional FOR cycle:
 
-**FOR** * &lt;counter&gt; * = * &lt;start&gt; * **TO** * &lt;limit&gt; * *[* **STEP** * &lt;s&gt; * *]*
+**FOR** *&lt;counter&gt;* = *&lt;start&gt;* **TO** *&lt;limit&gt;* *[* **STEP** *&lt;s&gt;* *]*
 
-&nbsp;&nbsp;&nbsp;&nbsp; *{* * &lt;statement&gt; * *}*
+&nbsp;&nbsp;&nbsp;&nbsp; *{* *&lt;statement&gt;* *}*
 
 **END** **FOR**
 
 ### Conditional WHILE cycle (repeated if true condition):
 
-**WHILE** * &lt;condition&gt; *
+**WHILE** *&lt;condition&gt;*
 
-&nbsp;&nbsp;&nbsp;&nbsp; *{* * &lt;statement&gt; * *}*
+&nbsp;&nbsp;&nbsp;&nbsp; *{* *&lt;statement&gt;* *}*
 
 **END** **WHILE**
 
@@ -256,18 +256,18 @@ Cycle statements
 
 **REPEAT**
 
-&nbsp;&nbsp;&nbsp;&nbsp; *{* * &lt;statement&gt; * *}*
+&nbsp;&nbsp;&nbsp;&nbsp; *{* *&lt;statement&gt;* *}*
 
-**UNTIL** * &lt;exit-condition&gt; *
+**UNTIL** *&lt;exit-condition&gt;*
 
 The WITH statement
 ------------------
 
 ### Enter inside to namespace of module:
 
-**WITH** * &lt;namespace&gt; *
+**WITH** *&lt;namespace&gt;*
 
-&nbsp;&nbsp;&nbsp;&nbsp; *{* * &lt;statement&gt; * *}*
+&nbsp;&nbsp;&nbsp;&nbsp; *{* *&lt;statement&gt;* *}*
 
 **END** **WITH**
 
