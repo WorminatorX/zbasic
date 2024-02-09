@@ -30,7 +30,7 @@ Comments
 
 ### Single line comment (skip by compiler):
 
-**REM** * &lt;comment&gt; *
+**REM** *&lt;comment&gt;*
 
 Data types and operators
 ------------------------
