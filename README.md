@@ -44,12 +44,13 @@ Two data types used: integer numbers and strings, also supported number arrays.
 
 ### System variables
 
-* **TIMER** - system timer counter (increate 1/10 sec)
+* **TIMER** - system timer counter (increases every 1/10 sec)
 
 ### Operators:
 
-* Get element of array or string: *lt;array-or-string&gt;* [ *&lt;index&gt;* ]
-* Call functions: *&lt;function&gt;*(*&lt;arg&gt;* *{*, *&lt;arg&gt;* *}*)
+* Get name from namespace (module): *&lt;namespace&gt;*.name
+* Get element of array or string: *&lt;array-or-string&gt;*[ *&lt;index&gt;* ]
+* Call function: *&lt;function&gt;*(*&lt;arg&gt;* *{*, *&lt;arg&gt;* *}*)
 * Call function with 1 argument: *&lt;function&gt;* *&lt;arg&gt;*
 * Arithmetic operators: - + * / (integer division) % (mod)
 * String operators: & (concat)
