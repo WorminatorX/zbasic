@@ -6,7 +6,7 @@ ZBASIC - the simple basic compiler, written on Java.
 Build and run
 -------------
 
-First, zbasic-core- * &lt;version&gt; * .jar library must be installed in local Maven repository.
+First, zbasic-core-*&lt;version&gt;*.jar library must be installed in local Maven repository.
 
 For build zbasic-core library: **mvn** **package**
 
@@ -23,7 +23,7 @@ For build zbasic-cli, zbasic-gui, zbasic-web: **mvn** **package**
 
 ### Compile from command line:
 
-**java** **-jar** **zbasic-cli.jar** *[* &lt;platform-name&gt; *]* * &lt;source-file&gt; * * &lt;target-file&gt; *
+**java** **-jar** **zbasic-cli.jar** *[* *&lt;platform-name&gt;* *]* *&lt;source-file&gt;* *&lt;target-file&gt;*
 
 Comments
 --------
@@ -42,8 +42,13 @@ Two data types used: integer numbers and strings, also supported number arrays.
 * **FALSE** = 0 - false value in conditions
 * **TRUE** = -1 - true value in conditions (or any non-zero number)
 
+### System variables
+
+* **TIMER** - system timer counter (increate 1/10 sec)
+
 ### Operators:
 
+* Get element of array or string: *lt;array-or-string&gt;* [ *&lt;index&gt;* ]
 * Call functions: *&lt;function&gt;*(*&lt;arg&gt;* *{*, *&lt;arg&gt;* *}*)
 * Call function with 1 argument: *&lt;function&gt;* *&lt;arg&gt;*
 * Arithmetic operators: - + * / (integer division) % (mod)
@@ -60,7 +65,7 @@ Modules can import names from another modules with EXPORT modifier.
 
 ### Structure of module:
 
-*{* **IMPORT** *[*package*{*.subpackage*}*.*]*ModuleName*[(*Name*{*,Name*}*)*]* *}*
+*{* **IMPORT** *[* package *{* .subpackage *}* .*]* ModuleName *[* (Name *{* ,Name *}* ) *]* *}*
 
 *{* *[* **EXPORT** *]* *&lt;constant-variable-array-function-or-subroutine-declaration&gt;* *}*
 
@@ -72,7 +77,7 @@ Modules can import names from another modules with EXPORT modifier.
 
 ### Declare constants:
 
-**CONST** ConstantName*[*$*]* = *&lt;constant-value&gt;*
+**CONST** ConstantName *[*$*]* = *&lt;constant-value&gt;*
 
 ### Declare variables with initialization:
 
@@ -80,7 +85,7 @@ Modules can import names from another modules with EXPORT modifier.
 
 ### Declare variables without initialization:
 
-**VAR** VarName*[*$*]* *{*, VarName*[*$*]* *}*
+**VAR** VarName *[*$*]* *{*, VarName *[*$*]* *}*
 
 ### Declare static arrays:
 
@@ -92,13 +97,13 @@ Modules can import names from another modules with EXPORT modifier.
 
 ### Declare simple functions:
 
-**DEF** FunctionName*[*$*]*(*[*argName*[*$*]* *{*, argName*[*$*]* *}* *]*) = *&lt;expression&gt;*
+**DEF** FunctionName *[*$*]* (*[*argName *[*$*]* *{*, argName *[*$*]* *}* *]*) = *&lt;expression&gt;*
 
 ### Declare multiline functions:
 
-**FUNCTION** FunctionName*[*$*]*(*[*argName*[*$*]* *{*, argName*[*$*]* *}* *]*)
+**FUNCTION** FunctionName *[*$*]* (*[*argName *[*$*]* *{*, argName *[*$*]* *}* *]*)
 
-*{* **VAR** localVarName*[*$*]* *{*, localVarName*[*$*]* *}* *}*
+*{* **VAR** localVarName *[*$*]* *{*, localVarName *[*$*]* *}* *}*
 
 *{* *&lt;statement&gt;* *}*
 
@@ -106,9 +111,9 @@ Modules can import names from another modules with EXPORT modifier.
 
 ### Declare subroutines:
 
-**SUB** SubroutineName(*[**argName*[*$*]* *{*, argName*[*$*]* *}* *]*)
+**SUB** SubroutineName(*[* *argName *[*$*]* *{*, argName *[*$*]* *}* *]*)
 
-*{* **VAR** localVarName *[*$*]* *{*, localVarName*[*$*]* *}* *}*
+*{* **VAR** localVarName *[*$*]* *{*, localVarName *[*$*]* *}* *}*
 
 *{* *&lt;statement&gt;* *}*
 
@@ -133,7 +138,7 @@ Functions
 
 **CHR$** ( *charCode* ) - character by ASCII code
 
-**CODE** (*c$* ) - ASCII code of character
+**CODE** ( *c$* ) - ASCII code of character
 
 **INSTR** ( *[* *startIndex* *]*, *string$*, *subString$* ) - find substring (0 if not found or index)
 
@@ -143,11 +148,11 @@ Functions
 
 **LSH** ( *number*, *&lt;bit-count&gt;* ) - left shift for number
 
-**MID$** (*string$*, *index* , *count* ) - middle substring
+**MID$** ( *string$*, *index* , *count* ) - middle substring
 
-**RANDOM** (*limit* ) - get integer random number in range from 0 to (limit - 1)
+**RANDOM** ( *limit* ) - get integer random number in range from 0 to (limit - 1)
 
-**RIGHT$** (*string$*, *count* ) - right substring
+**RIGHT$** ( *string$*, *count* ) - right substring
 
 **RSH** ( *number*, *&lt;bit-count&gt;* ) - signed right shift for number
 
