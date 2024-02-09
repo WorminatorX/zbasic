@@ -25,13 +25,6 @@ For build zbasic-cli, zbasic-gui, zbasic-web: **mvn** **package**
 
 **java** **-jar** **zbasic-cli.jar** *[* *&lt;platform-name&gt;* *]* *&lt;source-file&gt;* *&lt;target-file&gt;*
 
-Comments
---------
-
-### Single line comment (skip by compiler):
-
-**REM** *&lt;comment&gt;*
-
 Data types and operators
 ------------------------
 
@@ -119,6 +112,13 @@ Modules can import names from another modules with EXPORT modifier.
 *{* *&lt;statement&gt;* *}*
 
 **END** **SUB**
+
+Comments
+--------
+
+### Single line comments (skip by compiler):
+
+**REM** *&lt;comment&gt;*
 
 Functions
 ---------
