@@ -62,7 +62,7 @@ Modules can import names from another modules with EXPORT modifier.
 
 *{* **IMPORT** *[* *package* *{* .*subpackage* *}*.*]* ModuleName *[* Name *{*, Name *}* *]* *}*
 
-*{* *[***EXPORT***]* * &lt;constant-variable-array-function-or-subroutine-declaration&gt; * *}*
+*{* *[* **EXPORT** *]* * &lt;constant-variable-array-function-or-subroutine-declaration&gt; * *}*
 
 *[* **BEGIN**
 
@@ -100,7 +100,7 @@ Modules can import names from another modules with EXPORT modifier.
 
 *{* **VAR** localVarName *[* $ *]* *{* , localVarName *[* $ *]* *}* *}*
 
-*{**""<statement>""**}*
+*{* * &lt;statement&gt; * *}*
 
 **END** **FUNCTION**
 
